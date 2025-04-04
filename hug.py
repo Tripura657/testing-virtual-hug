@@ -5,7 +5,7 @@ st.set_page_config(page_title="Virtual Hug 🤗", layout="centered")
 st.title("🤗 Here's a virtual hug for you!")
 
 # Show a comforting GIF
-st.image("https://media1.tenor.com/m/0bp-O3e9disAAAAd/allen-ma-cravity-allen-ma.gif", width=900)
+st.image(virtual hug.gif, width=900)
 
 # Display a kind message
 st.markdown("""
