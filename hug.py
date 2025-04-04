@@ -1,15 +1,22 @@
 import streamlit as st
 
-# Streamlit page setup
-st.set_page_config(page_title="Virtual Hug 🤗", layout="centered")
-st.title("🤗 Here's a virtual hug for you!")
+# Page config
+st.set_page_config(page_title="Virtual Hug 🤗", layout="wide")
 
-# Show a comforting GIF
-st.image("https://media1.tenor.com/m/0bp-O3e9disAAAAd/allen-ma-cravity-allen-ma.gif", width=300)
+# Center-align using columns
+st.markdown("<h1 style='text-align: center;'>🤗 Here's a virtual hug for you!</h1>", unsafe_allow_html=True)
 
-# Display a kind message
+# Full-width layout using columns
+left, center, right = st.columns([1, 3, 1])
+
+with center:
+    st.video("https://media1.tenor.com/m/0bp-O3e9disAAAAd/allen-ma-cravity-allen-ma.gif")  # Streamlit auto-resizes video
+
+# Heartwarming message centered
 st.markdown("""
-You're doing great.  
-Take a deep breath.  
-Everything will be okay. 💙  
-""")
+<div style='text-align: center; font-size: 20px; padding-top: 20px;'>
+You're doing great.<br>
+Take a deep breath.<br>
+Everything will be okay. 💙
+</div>
+""", unsafe_allow_html=True)
