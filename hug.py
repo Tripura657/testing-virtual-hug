@@ -10,7 +10,7 @@ st.markdown("<h1 style='text-align: center;'>🤗 Here's a virtual hug for you!<
 left, center, right = st.columns([1, 3, 1])
 
 with center:
-    st.video("https://media1.tenor.com/m/0bp-O3e9disAAAAd/allen-ma-cravity-allen-ma.gif")  # Streamlit auto-resizes video
+    st.video("https://media1.tenor.com/m/0bp-O3e9disAAAAd/allen-ma-cravity-allen-ma.gif")
 
 # Heartwarming message centered
 st.markdown("""
