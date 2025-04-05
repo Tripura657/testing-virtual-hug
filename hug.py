@@ -19,5 +19,5 @@ if hug_video:
     st.video(hug_video)
 else:
     st.info("💖 No upload found. Here's a warm virtual hug from us:")
-    st.image("virtual hug.gif", width=900)
+    st.image("virtual hug.gif", width=900)  # <-- Make sure this file is in the same directory
     st.markdown("**You're not alone. We're here with you.** 💙")
