@@ -1,15 +1,23 @@
 import streamlit as st
 
-# Streamlit page setup
-st.set_page_config(page_title="Virtual Hug 🤗", layout="centered")
-st.title("🤗 Here's a virtual hug for you!")
+# Page configuration
+st.set_page_config(page_title="Virtual Hug", page_icon="🤗", layout="centered")
 
-# Show a comforting GIF
-st.image(virtual hug.gif, width=900)
+# App title
+st.title("🤗 Virtual Hug Station")
 
-# Display a kind message
-st.markdown("""
-You're doing great.  
-Take a deep breath.  
-Everything will be okay. 💙  
-""")
+# Description
+st.write("Sometimes, all we need is a warm hug. 💙")
+st.write("Upload a video from your loved ones or receive a cozy virtual hug from us!")
+
+# File uploader for user video (optional)
+hug_video = st.file_uploader("Upload a video from your loved one (MP4 only)", type=["mp4"])
+
+# Display based on upload
+if hug_video:
+    st.success("💖 Here's your personalized virtual hug:")
+    st.video(hug_video)
+else:
+    st.info("💖 No upload found. Here's a warm virtual hug from us:")
+    st.image("virtual hug.gif", width=900)
+    st.markdown("**You're not alone. We're here with you.** 💙")
